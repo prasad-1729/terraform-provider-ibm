@@ -33,6 +33,7 @@ import (
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/contextbasedrestrictions"
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/cos"
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/database"
+	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/db2"
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/directlink"
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/dnsservices"
 	"github.com/IBM-Cloud/terraform-provider-ibm/ibm/service/enterprise"
@@ -306,6 +307,7 @@ func Provider() *schema.Provider {
 			"ibm_cis_firewall_rules":                       cis.DataSourceIBMCISFirewallRules(),
 			"ibm_cis_origin_certificates":                  cis.DataSourceIBMCISOriginCertificateOrder(),
 			"ibm_cloudant":                                 cloudant.DataSourceIBMCloudant(),
+			"ibm_db2":                                      db2.DataSourceIBMDb2(),
 			"ibm_cloudant_database":                        cloudant.DataSourceIBMCloudantDatabase(),
 			"ibm_database":                                 database.DataSourceIBMDatabaseInstance(),
 			"ibm_database_connection":                      database.DataSourceIBMDatabaseConnection(),
@@ -1050,6 +1052,7 @@ func Provider() *schema.Provider {
 			"ibm_cis_origin_certificate_order":        cis.ResourceIBMCISOriginCertificateOrder(),
 
 			"ibm_cloudant":                                 cloudant.ResourceIBMCloudant(),
+			"ibm_db2":                                      db2.ResourceIBMDb2(),
 			"ibm_cloudant_database":                        cloudant.ResourceIBMCloudantDatabase(),
 			"ibm_cloud_shell_account_settings":             cloudshell.ResourceIBMCloudShellAccountSettings(),
 			"ibm_compute_autoscale_group":                  classicinfrastructure.ResourceIBMComputeAutoScaleGroup(),
